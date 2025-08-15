@@ -10,7 +10,8 @@ extern "C"
 
     /**
      * I2C PIO driver
-     * This driver provides a set of functions to control I2C devices using the PIO (Programmable Input/Output) capabilities of the RP2040 microcontroller.
+     * This driver provides a set of functions to control I2C devices using the PIO (Programmable Input/Output)
+     * capabilities of the RP2040 microcontroller.
      * @author Saurav Sajeev
      */
 

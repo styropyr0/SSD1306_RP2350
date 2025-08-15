@@ -2,7 +2,7 @@
 #include <string>
 #include <stdlib.h>
 #include "pico/stdlib.h"
-#include "SSD1306.h"
+#include "include/SSD1306.h"
 
 OLED oled(128, 64);
 int fps = 0;
@@ -47,7 +47,7 @@ void pico_loop() {
     }
 
     avg /= 127;
-    data[127] = (rand() % (27 - (-26) + 1)) + (-26); // Random between -26 and 27
+    data[127] = (rand() % (27 - (-26) + 1)) + (-26); 
 
     oled.clearScr();
 
@@ -64,5 +64,5 @@ void pico_loop() {
     uint32_t elapsed = to_ms_since_boot(get_absolute_time()) - start;
     fps = (elapsed > 0) ? (1000 / elapsed) : 0;
 
-    // sleep_ms(100); // Adjust animation speed
+    sleep_ms(10); // Adjust animation speed
 }

@@ -34,8 +34,8 @@ pico_sdk_init()
 
 add_executable(SSD1306_RP2350
     main.cpp
-    pio_i2c.c        
-    SSD1306.cpp
+    include/pio_i2c.c        
+    include/SSD1306.cpp
 )
 
 
