@@ -52,7 +52,7 @@ void pico_loop() {
     oled.clearScr();
 
     // Plot updated array
-    oled.bitBarPlot(0, 15, 64, 32, data, 120, 26);
+    oled.histogramPlot(0, 15, 64, 32, data, 120, 26);
 
     // Display FPS
     char buf[20];
