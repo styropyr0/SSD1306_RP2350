@@ -1,5 +1,16 @@
-## SSD1306 OLED Display Library for Raspberry Pi (GNU ARM Embedded Toolchain)
-A lightweight, fast library to control SSD1306-based OLED displays with Raspberry Pi, using C++ and standard Linux I2C APIs. This library offers versatile features comparable to the Arduino version, but does **not** include advanced scene-management (Fragments) or Drawable objects. Use direct method calls for all graphics, text, and data plotting.
+# SSD1306 OLED Display Driver for Raspberry Pi Microcontrollers
+**(Works with Clang/LLVM and ARM Embedded Toolchain)**
+
+A lightweight, fast driver library to control SSD1306-based OLED displays with Raspberry Pi, using C++ and standard Linux I2C APIs. This library offers versatile features comparable to the Arduino version, but does **not** include advanced scene-management (Fragments) or Drawable objects. Use direct method calls for all graphics, text, and data plotting.
+
+This driver is based on the [SSD1306 OLED Display Driver for Arduino](https://github.com/styropyr0/oled.h)
+
+| Power Mode         | Frame Rate (fps)        |
+|--------------------|------------------------|
+| Low Power Mode     | ≤5                     |
+| Balanced Mode      | 8–10                   |
+| Performance Mode   | 16–19                  |
+| Turbo Mode         | 40–43                  |
 
 ***
 
@@ -182,13 +193,6 @@ Include the `.h` file in your project and use `oled.draw` to render.
 
 ***
 
-### Limitations
-
-- **No Fragments/Drawables**: Scene management, batching, or reusable UI elements are not present. All rendering is immediate and explicit—use direct draw methods for each update.
-- **No advanced animation/scene switching**: For dashboards or panels, you need to implement manual buffer clearing/re-drawing.
-
-***
-
 ### Usage Pattern Comparison
 
 | Capability                  | Arduino/ESP32 Version             | Raspberry Pi Version (C++)        |
@@ -229,4 +233,4 @@ int main() {
 
 ## Conclusion
 
-This C++ library for SSD1306 displays on Raspberry Pi gives you robust text, graphics, and data plotting—ideal for sensor dashboards, status screens, or mini GUIs. Build, run, and update displays using standard Linux tools and C++. All methods are streamlined for direct calls—no scene batching, but everything else is there for rich, flexible UI.
+This C++ library for SSD1306 displays on Raspberry Pi gives you robust text, graphics, and data plotting—ideal for sensor dashboards, status screens, or mini GUIs. Build, run, and update displays using standard Linux tools and C++. All methods are streamlined for direct calls - no scene batching, but everything else is there for rich, flexible UI.
